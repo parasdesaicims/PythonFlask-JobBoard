@@ -9,7 +9,7 @@ def open_connection():
     connection = gettattr(g,'_connection', None)
     if connection == None:
         connection = g._connection = sqlite3.connect(PATH)
-    connection.rowfactory = sqlite3.row
+    connection.row_factory = sqlite3.row
     return connection
 
 @app.route('/')
