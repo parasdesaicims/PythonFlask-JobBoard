@@ -9,7 +9,7 @@ app=Flask(__name__)
 
 
 def open_connection():
-    connection = gettattr(g,'_connection', None)
+    connection = gettattr(g, '_connection', None)
     if connection == None:
         connection = g._connection = sqlite3.connect(PATH)
     connection.row_factory = sqlite3.row
